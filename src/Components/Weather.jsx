@@ -63,10 +63,9 @@ localStorage.setItem("city", city);
 };
 
 return (
+<div className="app-container">
 
-<div className="app-container">   {/* NEW MAIN CONTAINER */}
-
-<Header
+<Header 
 search={search}
 setSearch={setSearch}
 getWeather={getWeather}
