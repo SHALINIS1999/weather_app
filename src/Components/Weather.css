@@ -16,22 +16,20 @@ background-size:cover;
 background-position:center;
 }
 
-/* Main container */
 .app-container{
-flex:1;
+min-height:100vh;
 display:flex;
 flex-direction:column;
 }
 
-/* Weather section */
 .weather-container{
 flex:1;
 display:flex;
-flex-direction:column;
-align-items:center;
 justify-content:center;
+align-items:center;
 padding:20px;
 }
+
 
 /* Weather box */
 .weather-box{
