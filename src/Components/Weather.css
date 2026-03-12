@@ -1,104 +1,179 @@
-.weather-container {
-    min-height: 100vh;
-    background-image: url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
 }
 
-
-/* main card */
-
-.weather-card {
-    width: 80%;
-    max-width: 700px;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 40px;
-    margin-top: 30px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+/* Page Layout */
+body{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+background-image:url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21");
+background-size:cover;
+background-position:center;
 }
 
-
-/* current weather */
-
-.weather-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+/* Main container */
+.app-container{
+flex:1;
+display:flex;
+flex-direction:column;
 }
 
-
-.weather-icon {
-    width: 140px;
-    height: 140px;
+/* Weather section */
+.weather-container{
+flex:1;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:20px;
 }
 
-.weather-info h1 {
-    font-size: 38px;
-    margin: 10px 0;
+/* Weather box */
+.weather-box{
+background:rgba(255,255,255,0.85);
+padding:30px;
+border-radius:12px;
+width:400px;
+max-width:90%;
+text-align:center;
+box-shadow:0px 4px 15px rgba(0,0,0,0.2);
 }
 
-.weather-info p {
-    font-size: 18px;
+/* Search bar container */
+.search-container{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-bottom:20px;
+flex-wrap:wrap;
 }
 
-/* forecast section */
-
-.forecast {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-    flex-wrap: wrap;
-    gap: 20px;
+/* Input */
+.search-container input{
+padding:10px;
+font-size:16px;
+width:250px;
+border-radius:6px;
+border:1px solid #ccc;
 }
 
-.forecast-box {
-    background: rgba(255, 255, 255, 0.6);
-    padding: 20px;
-    border-radius: 15px;
-    width: 120px;
-    text-align: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+/* Button */
+.search-container button{
+padding:10px 15px;
+border:none;
+background:#0077ff;
+color:white;
+border-radius:6px;
+cursor:pointer;
 }
 
-.forecast-box img {
-    width: 45px;
-    margin: 10px 0;
+.search-container button:hover{
+background:#005ed6;
 }
 
-.forecast-box h4 {
-    font-size: 16px;
-    margin-bottom: 5px;
+/* Weather info */
+.temperature{
+font-size:40px;
+font-weight:bold;
+margin:10px 0;
 }
 
-.forecast-box p {
-    font-size: 16px;
+.city{
+font-size:22px;
+margin-bottom:10px;
 }
 
-/* responsive */
+.description{
+font-size:18px;
+}
 
-@media(max-width:768px) {
-    .weather-card {
-        width: 90%;
-        padding: 25px;
-    }
+/* Forecast container */
+.forecast-container{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:20px;
+flex-wrap:wrap;
+}
 
-    .weather-main {
-        flex-direction: column;
-        gap: 20px;
-    }
+/* Forecast card */
+.forecast-card{
+background:white;
+padding:10px;
+border-radius:8px;
+width:90px;
+text-align:center;
+box-shadow:0px 2px 10px rgba(0,0,0,0.1);
+}
 
-    .weather-icon {
-        width: 110px;
-        height: 110px;
-    }
+/* Footer */
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:auto;
+}
 
-    .forecast {
-        justify-content: center;
-    }
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width:768px){
+
+.weather-box{
+width:90%;
+padding:25px;
+}
+
+.temperature{
+font-size:32px;
+}
+
+.city{
+font-size:20px;
+}
+
+}
+
+/* Mobile */
+@media (max-width:480px){
+
+.weather-box{
+width:95%;
+padding:20px;
+}
+
+.search-container{
+flex-direction:column;
+}
+
+.search-container input{
+width:100%;
+}
+
+.search-container button{
+width:100%;
+}
+
+.temperature{
+font-size:28px;
+}
+
+.city{
+font-size:18px;
+}
+
+.description{
+font-size:16px;
+}
+
+.forecast-card{
+width:80px;
+}
+
 }
