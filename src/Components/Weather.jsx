@@ -115,8 +115,8 @@ return (
 
 </div>
 </div>
+<Footer/>
 
-<Footer />
 </div>
 )
 }
